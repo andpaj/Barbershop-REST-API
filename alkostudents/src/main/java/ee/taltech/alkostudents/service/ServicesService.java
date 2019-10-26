@@ -11,8 +11,8 @@ import java.util.List;
 @Service
 public class ServicesService {
     private ArrayList<Services> services = new ArrayList<>(Arrays.asList(
-            new Services("masinlõikus", 15L),
-            new Services("habemekujundamine", 20L)
+            new Services("masinlõikus", 15L, 30),
+            new Services("habemekujundamine", 20L, 30)
 
     ));
 

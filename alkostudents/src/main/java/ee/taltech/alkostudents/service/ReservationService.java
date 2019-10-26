@@ -22,15 +22,4 @@ public class ReservationService {
     public void addReservation(Reservation reservation) {
         reservations.add(reservation);
     }
-
-
-/*
-    public static void main(String[] args) {
-        ReservationService test = new ReservationService();
-        test.addReservation(new Reservation(1L, "Oleg", "Potato",
-                "m@m.com", 5555555L, "Masinlõikus", "25.10", "19:10"));
-    }
- */
-
-
 }
