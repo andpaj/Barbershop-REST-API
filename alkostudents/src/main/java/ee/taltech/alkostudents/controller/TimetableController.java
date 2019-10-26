@@ -21,4 +21,9 @@ public class TimetableController {
     public List<Timetable> timetables(@RequestParam(required = false) String name) {
         return timetableService.getAllTimetables();
     }
+
+    @GetMapping("/all")
+    public List<Timetable> timetables() {
+        return timetableService.getAllTimetables2();
+    }
 }

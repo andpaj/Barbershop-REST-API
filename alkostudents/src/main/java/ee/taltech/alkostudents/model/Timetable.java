@@ -17,12 +17,12 @@ public class Timetable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String date;
+    private Long timeId;
     private String time;
     private boolean free;
 
-    public Timetable(String date, String time, boolean free) {
-        this.date = date;
+    public Timetable(Long timeId, String time, boolean free) {
+        this.timeId = timeId;
         this.time = time;
         this.free = free;
     }

@@ -1,6 +1,8 @@
 package ee.taltech.alkostudents.service;
 
 import ee.taltech.alkostudents.model.Timetable;
+import ee.taltech.alkostudents.repository.TimetableRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,7 +10,10 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class TimetableService {
+
+    private final TimetableRepository timetableRepository;
 
     private ArrayList<Timetable> times = new ArrayList<>();
 
@@ -39,5 +44,10 @@ public class TimetableService {
             return String.valueOf(hour + ":00");
         }
         return String.valueOf(hour + ":30");
+    }
+
+    public List<Timetable> getAllTimetables2() {
+
+        return timetableRepository.findAll();
     }
 }

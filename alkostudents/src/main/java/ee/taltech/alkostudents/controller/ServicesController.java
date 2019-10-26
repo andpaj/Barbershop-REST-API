@@ -21,4 +21,9 @@ public class ServicesController {
     public List<Services> services(@RequestParam(required = false) String name) {
         return servicesService.getAllServices();
     }
+
+    @GetMapping("/all")
+    public List<Services> Services() {
+        return servicesService.getAllServices2();
+    }
 }

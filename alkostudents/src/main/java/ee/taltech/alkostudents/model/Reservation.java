@@ -1,6 +1,5 @@
 package ee.taltech.alkostudents.model;
 
-import ee.taltech.alkostudents.pojo.ReservationDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.List;
 
 @Getter
 @Setter
@@ -19,15 +17,15 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String firstName;
     private String lastName;
     private String email;
     private Long phone;
-    private List<Services> services;
+    private String services;
     private String date;
     private String time;
-
-    public Reservation(Long id, String firstName, String lastName, String email, Long phone, List<Services> services, String date, String time) {
+    public Reservation(Long id, String firstName, String lastName, String email, Long phone, String services, String date, String time) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -38,15 +36,68 @@ public class Reservation {
         this.time = time;
     }
 
-    public Reservation(ReservationDto reservationDto) {
-        this.id = reservationDto.getId();
-        this.firstName = reservationDto.getFirstName();
-        this.lastName = reservationDto.getLastName();
-        this.email = reservationDto.getEmail();
-        this.phone = reservationDto.getPhone();
-        this.services = reservationDto.getServices();
-        this.date = reservationDto.getDate();
-        this.time = reservationDto.getTime();
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
+
+    public String getServices() {
+        return services;
+    }
+
+    public void setServices(String services) {
+        this.services = services;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
 }
