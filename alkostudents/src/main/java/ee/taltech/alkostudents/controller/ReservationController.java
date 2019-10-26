@@ -3,10 +3,7 @@ package ee.taltech.alkostudents.controller;
 import ee.taltech.alkostudents.model.Reservation;
 import ee.taltech.alkostudents.service.ReservationService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +17,32 @@ public class ReservationController {
     public List<Reservation> reservations(@RequestParam(required = false) String name) {
         return reservationService.getAllReservation();
     }
+
+    /**
+     * Makes reservation if data is sent using form
+     * @param reservation data from form
+     * @return PH
+     */
+    /*
+    @PostMapping
+    public String createReservation(@ModelAttribute Reservation reservation) {
+        reservationService.addReservation(reservation);
+        return "win";
+    }
+    
+     */
+
+    /**
+     * Makes reservation if data is sent using form
+     * @param reservation data from form
+     * @return PH
+     */
+
+    @PostMapping
+    public String createReservation(@RequestBody Reservation reservation) {
+        reservationService.addReservation(reservation);
+        return "win";
+    }
+
+
 }

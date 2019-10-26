@@ -19,9 +19,11 @@ public class Services {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String serviceName;
     private Long price;
+    private int duration;
 
-    public Services(String serviceName, Long price) {
+    public Services(String serviceName, Long price, int duration) {
         this.serviceName = serviceName;
         this.price = price;
+        this.duration = duration;
     }
 }
