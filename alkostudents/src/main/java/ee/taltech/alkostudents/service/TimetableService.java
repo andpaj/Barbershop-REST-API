@@ -20,12 +20,14 @@ public class TimetableService {
     }
 
     public void addTimesToTable() {
-        times.add(new Timetable("28.10", "10:00", true));
-        String lastAddedTime = "10:00";
-        while (!lastAddedTime.equals("19:00")) {
-            String timeToAdd = nextTime(lastAddedTime);
-            times.add(new Timetable("28.10", timeToAdd, true));
-            lastAddedTime = timeToAdd;
+        if (times.isEmpty()) {
+            times.add(new Timetable("28.10", "10:00", true));
+            String lastAddedTime = "10:00";
+            while (!lastAddedTime.equals("19:00")) {
+                String timeToAdd = nextTime(lastAddedTime);
+                times.add(new Timetable("28.10", timeToAdd, true));
+                lastAddedTime = timeToAdd;
+            }
         }
     }
 
