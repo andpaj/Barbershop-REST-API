@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/model/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/model/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/ServicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/ServicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -115,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572114237613</updated>
-      <workItem from="1572114241686" duration="9742000" />
+      <workItem from="1572114241686" duration="11896000" />
     </task>
     <servers />
   </component>
