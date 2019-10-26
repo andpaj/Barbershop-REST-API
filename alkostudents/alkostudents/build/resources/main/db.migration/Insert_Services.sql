@@ -1,1 +1,0 @@
-INSERT INTO BARBERSERVICES VALUES(2, 'Varvimine', 'Blondeeritakse');
