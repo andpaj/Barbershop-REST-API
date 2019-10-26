@@ -1,6 +1,7 @@
 package ee.taltech.alkostudents.controller;
 
 import ee.taltech.alkostudents.model.Reservation;
+import ee.taltech.alkostudents.pojo.ReservationDto;
 import ee.taltech.alkostudents.service.ReservationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,7 @@ public class ReservationController {
         reservationService.addReservation(reservation);
         return "win";
     }
-    
+
      */
 
     /**
@@ -37,10 +38,18 @@ public class ReservationController {
      * @param reservation data from form
      * @return PH
      */
-
+/*
     @PostMapping
     public String createReservation(@RequestBody Reservation reservation) {
         reservationService.addReservation(reservation);
+        return "win";
+    }
+
+
+ */
+    @PostMapping
+    public String createReservation(@RequestBody ReservationDto reservation) {
+        reservationService.addReservation(new Reservation(reservation));
         return "win";
     }
 
