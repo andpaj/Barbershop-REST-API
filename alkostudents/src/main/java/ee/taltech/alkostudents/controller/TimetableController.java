@@ -1,6 +1,5 @@
 package ee.taltech.alkostudents.controller;
 
-import ee.taltech.alkostudents.model.Reservation;
 import ee.taltech.alkostudents.model.Timetable;
 import ee.taltech.alkostudents.service.TimetableService;
 import lombok.AllArgsConstructor;

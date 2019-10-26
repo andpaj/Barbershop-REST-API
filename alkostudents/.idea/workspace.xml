@@ -3,45 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="657c1887-996f-4693-916d-6cd704d6d348" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/dataSources/de457109-7a04-492d-9b85-ae16a9e9ad84.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/dataSources/de457109-7a04-492d-9b85-ae16a9e9ad84/storage_v2/_src_/database/HEROES.KLrPfg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/dataSources/de457109-7a04-492d-9b85-ae16a9e9ad84/storage_v2/_src_/database/HEROES.KLrPfg/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/classes/java/main/ee/taltech/alkostudents/AlkostudentsApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/classes/java/main/ee/taltech/alkostudents/controller/AlkostudentsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/application2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/Insert_Client.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/Insert_Services.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/Insert_Timetable.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/V1_Create_client.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/V2_Create_services.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alkostudents/build/resources/main/db.migration/V3_Create_timetable.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/AlkostudentsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/AlkostudentsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/TimetableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/service/TimetableService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../alkostudents_melvin/alkostudents/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -149,7 +111,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572114237613</updated>
-      <workItem from="1572114241686" duration="3813000" />
+      <workItem from="1572114241686" duration="7392000" />
     </task>
     <servers />
   </component>
