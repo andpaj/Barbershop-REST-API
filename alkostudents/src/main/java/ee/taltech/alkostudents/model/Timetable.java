@@ -17,7 +17,6 @@ public class Timetable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private String date;
     private String time;
     private boolean free;

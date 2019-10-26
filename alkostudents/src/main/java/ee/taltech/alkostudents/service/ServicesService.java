@@ -12,9 +12,9 @@ import java.util.List;
 public class ServicesService {
     private ArrayList<Services> services = new ArrayList<>(Arrays.asList(
             new Services("masinlõikus", 15L),
-            new Services("habemekujundamine", 20L))
+            new Services("habemekujundamine", 20L)
 
-    );
+    ));
 
     public List<Services> getAllServices() {
         if (!services.isEmpty()) {
