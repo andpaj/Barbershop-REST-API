@@ -2,8 +2,9 @@ package ee.taltech.alkostudents.service;
 
 import ee.taltech.alkostudents.model.Services;
 import ee.taltech.alkostudents.pojo.ServicesDto;
+import ee.taltech.alkostudents.repository.ServicesRepository;
 import lombok.AllArgsConstructor;
-import org.apache.commons.collections4.CollectionUtils;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,37 +16,37 @@ public class ServicesService {
 
     private final ServicesRepository servicesRepository;
 
+    public ServicesService(ServicesRepository servicesRepository) {
+        this.servicesRepository = servicesRepository;
+    }
+
     public List<ServicesDto> getAllServices() {
         return convertServices(servicesRepository.findAll());
     }
 
-    public List<ServicesDto> getByName(String name) {
-//        return convertServices(servicesRepository.findByName2(name));
-        return convertServices(servicesRepository.findByName(name));
-    }
+    //public List<ServicesDto> getByName(String name) {
+        //return convertServices(servicesRepository.findByName2(name));
+        //return convertServices(servicesRepository.findByName(name));
+    //}
 
-    public ServicesDto getById(Long id) {
+    /*public ServicesDto getById(Long id) {
         Services services = getServicesById(id);
-        ServicesDto ServicesDto = convert(services);
-        if (CollectionUtils.isNotEmpty(services.getEquipment())){
-            ServicesDto.setEquipment(convertEquipment(services.getEquipment()));
-        }
-        return ServicesDto;
-    }
+        return convert(services);
+    }*/
 
-    private Services getServiceById(Long id) {
+    /*private Services getServicesById(Long id) {
         return servicesRepository.findById(id).orElseThrow(ServicesNotFoundException::new);
-    }
+    }*/
 
-    public ServicesDto createNewServices(ServicesDto ServicesDto) {
+    /*public ServicesDto createNewServices(ServicesDto ServicesDto) {
         Services services = new Services(ServicesDto);
         if (StringUtils.isBlank(services.getName())) {
             throw new ServicesValidationException();
         }
         return convert(servicesRepository.save(services));
-    }
+    }*/
 
-    public ServicesDto updateServices(ServicesDto ServicesDto) {
+   /* public ServicesDto updateServices(ServicesDto ServicesDto) {
         Services services = new Services();
         services.setId(ServicesDto.getId());
         services.setName(ServicesDto.getName());
@@ -53,12 +54,12 @@ public class ServicesService {
             throw new ServicesValidationException();
         }
         return convert(servicesRepository.save(services));
-    }
+    }*/
 
-    public void deleteServices(Long id) {
+    /*public void deleteServices(Long id) {
         Services services = getServicesById(id);
         servicesRepository.delete(services);
-    }
+    }*/
 
     private List<ServicesDto> convertServices(List<Services> byNameContaining) {
         return byNameContaining.stream()
@@ -71,6 +72,7 @@ public class ServicesService {
         ServicesDto dto = new ServicesDto();
         dto.setId(services.getId());
         dto.setName(services.getName());
+        dto.setPrice(services.getPrice());
         return dto;
     }
 }

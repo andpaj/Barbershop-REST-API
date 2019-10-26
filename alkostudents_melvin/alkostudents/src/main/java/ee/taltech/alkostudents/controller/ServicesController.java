@@ -25,18 +25,15 @@ public class ServicesController {
 
     @GetMapping
     public List<ServicesDto> Services(@RequestParam(required = false) String name) {
-        if (name == null || name.equals("")) {
-            return servicesService.getAllServices();
-        }
-        return servicesService.getByName(name);
+        return servicesService.getAllServices();
     }
 
-    @GetMapping("/{id}")
+    /*@GetMapping("/{id}")
     public ServicesDto getService(@PathVariable Long id) {
         return servicesService.getById(id);
-    }
+    }*/
 
-    @PostMapping
+    /*@PostMapping
     public ServicesDto saveService(@RequestBody ServicesDto service){
         return servicesService.createNewService(service);
     }
@@ -49,6 +46,6 @@ public class ServicesController {
     @DeleteMapping("/{id}")
     public void deleteService(@PathVariable Long id){
         servicesService.deleteService(id);
-    }
+    }*/
 
 }
