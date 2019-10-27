@@ -15,8 +15,15 @@ public class ServicesController {
 
     private ServicesService servicesService;
 
+    //ArrayList
     @GetMapping("/get")
     public List<Services> services(@RequestParam(required = false) String name) {
         return servicesService.getAllServices();
+    }
+
+    //Database
+    @GetMapping("/all")
+    public List<Services> Services() {
+        return servicesService.getAllServices2();
     }
 }
