@@ -1,57 +1,36 @@
 package ee.taltech.alkostudents.controller;
 
 import ee.taltech.alkostudents.model.Reservation;
-import ee.taltech.alkostudents.pojo.ReservationDto;
+import ee.taltech.alkostudents.model.ReservationCreationRequest;
 import ee.taltech.alkostudents.service.ReservationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+
+@CrossOrigin
 @RestController
 @RequestMapping("/reservation")
 @AllArgsConstructor
 public class ReservationController {
     private ReservationService reservationService;
 
-    @GetMapping
-    public List<Reservation> reservations(@RequestParam(required = false) String name) {
+    @GetMapping("/get")
+    public Collection<Reservation> showReservations() {
         return reservationService.getAllReservation();
     }
 
     /**
      * Makes reservation if data is sent using form
-     * @param reservation data from form
+     * @param request data from form
      * @return PH
      */
-    /*
-    @PostMapping
-    public String createReservation(@ModelAttribute Reservation reservation) {
-        reservationService.addReservation(reservation);
-        return "win";
+
+    @PostMapping("/post")
+    public Reservation createReservation(@RequestBody ReservationCreationRequest request) {
+        return reservationService.addReservation(request);
     }
-
-     */
-
-    /**
-     * Makes reservation if data is sent using form
-     * @param reservation data from form
-     * @return PH
-     */
-/*
-    @PostMapping
-    public String createReservation(@RequestBody Reservation reservation) {
-        reservationService.addReservation(reservation);
-        return "win";
-    }
-
-
- */
-    @PostMapping
-    public String createReservation(@RequestBody ReservationDto reservation) {
-        reservationService.addReservation(new Reservation(reservation));
-        return "win";
-    }
-
-
 }
