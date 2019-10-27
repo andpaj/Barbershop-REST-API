@@ -1,7 +1,9 @@
 package ee.taltech.alkostudents.service;
 
 
+import ee.taltech.alkostudents.controller.repository.ServicesRepository;
 import ee.taltech.alkostudents.model.Services;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,10 +11,14 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ServicesService {
+
+    private final ServicesRepository servicesRepository;
+
     private ArrayList<Services> services = new ArrayList<>(Arrays.asList(
-            new Services("masinlõikus", 15L, 30),
-            new Services("habemekujundamine", 20L, 30)
+            new Services(1L, "masinlõikus", 15L, 30),
+            new Services(2L, "habemekujundamine", 20L, 30)
 
     ));
 
@@ -26,4 +32,11 @@ public class ServicesService {
     public void addServices(Services service) {
         services.add(service);
     }
+
+    //Database
+    public List<Services> getAllServices2() {
+        return servicesRepository.findAll();
+    }
+
 }
+

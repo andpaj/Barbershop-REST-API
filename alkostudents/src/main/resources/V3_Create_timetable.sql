@@ -1,0 +1,6 @@
+CREATE TABLE Timetable(
+   timeId  INTEGER PRIMARY KEY,
+   time VARCHAR(32) NOT NULL,
+   free BOOLEAN NOT NULL DEFAULT TRUE,
+
+);
