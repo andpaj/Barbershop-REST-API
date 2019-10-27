@@ -18,13 +18,8 @@ public class AlkostudentsApplication {
 		SpringApplication.run(AlkostudentsApplication.class, args);
 	}
 	@Bean
-	public CommandLineRunner initStuff(ReservationService reservationService, TimetableService timetableService) {
+	public CommandLineRunner initStuff(TimetableService timetableService) {
 		return (args) ->
-				/*
-				reservationService.addReservation(new Reservation(1L, "Oleg", "Potato",
-						"m@m.com", 5555555L, "Masinlõikus", "25.10", "19:10"));
-
-				 */
 				timetableService.addTimesToTable();
 
 

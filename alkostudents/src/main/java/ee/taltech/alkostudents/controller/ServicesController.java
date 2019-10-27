@@ -3,21 +3,19 @@ package ee.taltech.alkostudents.controller;
 import ee.taltech.alkostudents.model.Services;
 import ee.taltech.alkostudents.service.ServicesService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/services")
 @AllArgsConstructor
 public class ServicesController {
 
     private ServicesService servicesService;
 
-    @GetMapping
+    @GetMapping("/get")
     public List<Services> services(@RequestParam(required = false) String name) {
         return servicesService.getAllServices();
     }

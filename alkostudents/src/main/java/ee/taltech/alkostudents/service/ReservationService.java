@@ -1,25 +1,31 @@
 package ee.taltech.alkostudents.service;
 
+import ee.taltech.alkostudents.controller.repository.ReservationRepository;
 import ee.taltech.alkostudents.model.Reservation;
+import ee.taltech.alkostudents.model.ReservationCreationRequest;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static ee.taltech.alkostudents.Util.ReservationServiceUtils.creationRequestMapToTicket;
+
+@Slf4j
 @Service
+@RequiredArgsConstructor
 public class ReservationService {
 
-    private ArrayList<Reservation> reservations = new ArrayList<>();
-
+    private final ReservationRepository reservationRepository;
 
     public List<Reservation> getAllReservation() {
-        if (!reservations.isEmpty()) {
-            return reservations;
-        }
-        return new ArrayList<>();
+        List<Reservation> reservations = reservationRepository.findAll();
+        return reservations;
     }
 
-    public void addReservation(Reservation reservation) {
-        reservations.add(reservation);
+    public Reservation addReservation(ReservationCreationRequest request) {
+        Reservation newReservation = creationRequestMapToTicket(request);
+        return reservationRepository.save(newReservation);
     }
 }
