@@ -1,5 +1,28 @@
-job1:
-  script: "execute-script-for-job1"
+stages:
+  - build
+  - test
+  - deploy
 
-job2:
-  script: "execute-script-for-job2"
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+
+build alkostudents:
+  stage: build
+  cache:
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+  artifacts:
+    paths:
+      - build/libs
+  tags:
+    - alkostudents-back-tag
+  script:
+    - ./gradlew assemble
+
+test alkostudents:
+  stage: test
+  tags:
+    - alkostudents-back-tag
+  script:
+    - ./gradlew check
