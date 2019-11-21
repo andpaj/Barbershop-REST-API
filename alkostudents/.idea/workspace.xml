@@ -19,23 +19,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Alkostudents" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Alkostudents" type="feb32156:DbDataSourceImpl" />
-        <item name="ALKOSTUDENTS: database" type="2aa06773:H2ImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Alkostudents" type="feb32156:DbDataSourceImpl" />
-        <item name="ALKOSTUDENTS: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ExternalProjectsData">
@@ -66,7 +50,7 @@
   <component name="ProjectId" id="1SmVpxk3M57KoRi6AbnCGjL4gHB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="DatabaseDriversLRU" value="h2&#10;postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -74,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/controller/repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,8 +71,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/controller/repository" />
+      <recent name="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/ee/taltech/alkostudents/controller/repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,6 +168,8 @@
       <workItem from="1572146342632" duration="569000" />
       <workItem from="1572168948982" duration="799000" />
       <workItem from="1572170899411" duration="1612000" />
+      <workItem from="1573391886563" duration="11000" />
+      <workItem from="1574323292977" duration="320000" />
     </task>
     <servers />
   </component>

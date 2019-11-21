@@ -15,15 +15,14 @@ public class ServicesController {
 
     private ServicesService servicesService;
 
-    //ArrayList
-    @GetMapping("/get")
-    public List<Services> services(@RequestParam(required = false) String name) {
+    @GetMapping("/findall")
+    public List<Services> services() {
         return servicesService.getAllServices();
     }
 
-    //Database
-    @GetMapping("/all")
-    public List<Services> Services() {
-        return servicesService.getAllServices2();
+    @PostMapping("/create")
+    public void create3(@RequestBody Services service){
+        servicesService.addService(service);
+        System.out.println("Service is created!");;
     }
 }

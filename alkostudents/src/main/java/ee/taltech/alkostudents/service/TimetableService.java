@@ -1,53 +1,38 @@
 package ee.taltech.alkostudents.service;
 
-import ee.taltech.alkostudents.controller.repository.TimetableRepository;
 import ee.taltech.alkostudents.model.Timetable;
-import lombok.RequiredArgsConstructor;
+import ee.taltech.alkostudents.repository.TimetableRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class TimetableService {
 
-    private final TimetableRepository timetableRepository;
-    private ArrayList<Timetable> times = new ArrayList<>();
+    private TimetableRepository repo;
 
-    public List<Timetable> getAllTimetables() {
-        if (!times.isEmpty()) {
-            return times;
-        }
-        return new ArrayList<>();
+    public TimetableService(TimetableRepository repo) {
+        this.repo = repo;
     }
 
-    public void addTimesToTable() {
-        if (times.isEmpty()) {
-            times.add(new Timetable(1L, "10:00", true));
-            String lastAddedTime = "10:00";
-            while (!lastAddedTime.equals("19:00")) {
-                String timeToAdd = nextTime(lastAddedTime);
-                times.add(new Timetable(2L, timeToAdd, true));
-                lastAddedTime = timeToAdd;
-            }
-        }
+    public List<Timetable> getAllTimes() {
+        List<Timetable> timetables = new ArrayList<>();
+        repo.findAll().forEach(timetables::add);
+        return timetables;
     }
 
-    private String nextTime(String fromTime) {
-        int hour = Integer.parseInt(fromTime.substring(0, 2));
-        int minute = Integer.parseInt(fromTime.substring(fromTime.length() - 2));
-        if (minute == 30) {
-            hour++;
-            return String.valueOf(hour + ":00");
-        }
-        return String.valueOf(hour + ":30");
+    public Timetable addTimes(Timetable timetables) {
+        return repo.save(converter(timetables));
     }
 
-    //Database
-    public List<Timetable> getAllTimetables2() {
-        return timetableRepository.findAll();
+    public Timetable converter(Timetable timetables) {
+        Timetable times = new Timetable();
+        times.setId(timetables.getId());
+        times.setDate(timetables.getDate());
+        times.setTime(timetables.getTime());
+        times.setFree(timetables.getFree());
+        return times;
     }
 
 }

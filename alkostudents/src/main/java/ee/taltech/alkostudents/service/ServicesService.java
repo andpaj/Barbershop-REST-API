@@ -1,42 +1,39 @@
 package ee.taltech.alkostudents.service;
 
 
-import ee.taltech.alkostudents.controller.repository.ServicesRepository;
 import ee.taltech.alkostudents.model.Services;
-import lombok.RequiredArgsConstructor;
+import ee.taltech.alkostudents.repository.ServicesRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class ServicesService {
 
-    private final ServicesRepository servicesRepository;
+    private ServicesRepository repo;
 
-    private ArrayList<Services> services = new ArrayList<>(Arrays.asList(
-            new Services(1L, "masinlõikus", 15L, 30),
-            new Services(2L, "habemekujundamine", 20L, 30)
-
-    ));
+    public ServicesService(ServicesRepository repo) {
+        this.repo = repo;
+    }
 
     public List<Services> getAllServices() {
-        if (!services.isEmpty()) {
-            return services;
-        }
-        return new ArrayList<>();
+        List<Services> services = new ArrayList<>();
+        repo.findAll().forEach(services::add);
+        return services;
     }
 
-    public void addServices(Services service) {
-        services.add(service);
+    public Services addService(Services service) {
+        return repo.save(converter(service));
     }
 
-    //Database
-    public List<Services> getAllServices2() {
-        return servicesRepository.findAll();
+    public Services converter(Services service) {
+        Services serv = new Services();
+        serv.setId(service.getId());
+        serv.setServiceName(service.getServiceName());
+        serv.setPrice(service.getPrice());
+        serv.setDuration(service.getDuration());
+        return serv;
     }
 
 }
-
