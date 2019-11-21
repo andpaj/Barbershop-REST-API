@@ -15,14 +15,14 @@ public class TimetableController {
 
     private TimetableService timetableService;
 
-    @GetMapping
-    public List<Timetable> timetables(@RequestParam(required = false) String name) {
-        return timetableService.getAllTimetables();
+    @GetMapping("/findall")
+    public List<Timetable> services() {
+        return timetableService.getAllTimes();
     }
 
-    //Database
-    @GetMapping("/all")
-    public List<Timetable> timetables() {
-        return timetableService.getAllTimetables2();
+    @PostMapping("/create")
+    public void create(@RequestBody Timetable timetable){
+        timetableService.addTimes(timetable);
+
     }
 }

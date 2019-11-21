@@ -8,16 +8,22 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "BARBERSERVICES")
 @Entity
+@Table(name = "Services")
 @NoArgsConstructor
 public class Services {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
+
+    @Column(name = "serviceName")
     private String serviceName;
+
+    @Column(name = "price")
     private Long price;
+
+    @Column(name = "duration")
     private int duration;
 
     public Services(Long id, String serviceName, Long price, int duration) {
@@ -25,5 +31,30 @@ public class Services {
         this.price = price;
         this.duration = duration;
         this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getServiceName() {
+        return serviceName;
+    }
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+    public Long getPrice() {
+        return price;
+    }
+    public void setPrice(Long price) {
+        this.price = price;
+    }
+    public int getDuration() {
+        return duration;
+    }
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
