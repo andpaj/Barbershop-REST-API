@@ -20,9 +20,11 @@ build alkostudents:
   script:
     - ./gradlew assemble
 
-test alkostudents:
-  stage: test
+deploy alkostudents:
+  stage: deploy
   tags:
     - alkostudents-back-tag
   script:
-    - ./gradlew check
+    - mkdir -p ~/api-deployment
+    - rm -rf ~/api-deployment/*
+    - cp -r build/libs/. ~/api-deployment
