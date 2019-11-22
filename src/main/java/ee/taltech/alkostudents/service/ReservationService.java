@@ -1,8 +1,8 @@
 package ee.taltech.alkostudents.service;
 
+import ee.taltech.alkostudents.repository.ReservationRepository;
 import ee.taltech.alkostudents.model.Reservation;
 import ee.taltech.alkostudents.model.ReservationCreationRequest;
-import ee.taltech.alkostudents.repository.ReservationRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

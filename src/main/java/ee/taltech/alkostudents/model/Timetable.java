@@ -9,12 +9,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "Timetable")
+@Table(name = "timetable")
 @NoArgsConstructor
 public class Timetable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
     @Column(name = "date")
@@ -23,7 +24,7 @@ public class Timetable {
     @Column(name = "time")
     private String time;
 
-    @Column(name = "reservedStatus")
+    @Column(name = "reservedstatus")
     private boolean free;
 
     public Timetable(Long id, String date, String time, boolean free) {
