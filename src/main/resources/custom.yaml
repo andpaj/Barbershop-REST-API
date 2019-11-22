@@ -1,0 +1,19 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /api
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults : false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/alkostudentsdb
+    username: alkouser
+    password: alkouser
