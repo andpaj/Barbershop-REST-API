@@ -9,15 +9,16 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "Services")
+@Table(name = "services")
 @NoArgsConstructor
 public class Services {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
-    @Column(name = "serviceName")
+    @Column(name = "servicename")
     private String serviceName;
 
     @Column(name = "price")
