@@ -28,5 +28,5 @@ deploy alkostudents:
     - mkdir -p ~/api-deployment
     - rm -rf ~/api-deployment/*
     - cp -r build/libs/. ~/api-deployment
-    - cp /home/custom ~/api-deployment
+    - cp /home/custom.yaml ~/api-deployment
     - sudo service alkostudents restart
