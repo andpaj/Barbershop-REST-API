@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 9000
   servlet:
     context-path: /api
 
@@ -17,3 +17,5 @@ spring:
     url: jdbc:postgresql://localhost:5432/alkostudentsdb
     username: alkouser
     password: alkouser
+logging:
+  path: ./logs 
