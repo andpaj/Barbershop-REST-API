@@ -6,6 +6,7 @@
 
 ## Step 2: Connect to database
 ### Use following commands
+    psql
     \c alkostudentsdb
 
 ## Step 3: See described table
