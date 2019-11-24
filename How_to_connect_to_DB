@@ -1,0 +1,14 @@
+# Guide for connecting to PostgreSQL
+
+## Step 1: Log in to server as user "postgres"
+### Use following commands
+    sudo su postgres
+
+## Step 2: Connect to database
+### Use following commands
+    \c alkostudentsdb
+
+## Step 3: See described table
+### Use following commands
+    \d <table>
+    \d reservations
