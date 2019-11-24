@@ -1,4 +1,3 @@
-
 # Barbershop
 Alko-students project
 
@@ -8,13 +7,6 @@ Alko-students project
 ### User module
     1. User can register haircut time
     2. User can select haircut service
-    
-    
-### Admin module
-    1. When logging in, open admin page 
-    2. Can add services
-    3. Can delete registrations
-    
 
 
 ## Nice to have
