@@ -26,8 +26,4 @@ public class ServicesController {
         System.out.println("Service is created!");;
     }
 
-    @GetMapping("test")
-    public String test() {
-        return "TEST";
-    }
 }
