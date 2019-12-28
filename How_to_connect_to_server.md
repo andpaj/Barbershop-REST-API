@@ -4,7 +4,7 @@
 
 ## Step 2: Open terminal/cmd
 ### Use following commands
-  ssh -i "alkostudents.pem" ubuntu@ec2-18-189-16-204.us-east-2.compute.amazonaws.com
+  ssh -i "alkostudents.pem" ubuntu@ec2-3-134-57-255.us-east-2.compute.amazonaws.com
 
   If not working, then go to AWS website, start, connect and copy new command.
 
