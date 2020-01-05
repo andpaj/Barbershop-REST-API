@@ -13,9 +13,10 @@ spring:
           use_jdbc_metadata_defaults : false
     hibernate:
       ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: jdbc:postgresql://localhost:5432/alkostudentsdb
     username: alkouser
-    password: alkouser
+    password: alkouserpw
 logging:
-  path: ./logs 
+  path: ./logs
