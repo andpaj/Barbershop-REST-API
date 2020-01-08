@@ -22,6 +22,9 @@ build alkostudents:
 
 deploy alkostudents:
   stage: deploy
+  only:
+    refs:
+      - master
   tags:
     - alkostudents-back-tag
   script:
