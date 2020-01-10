@@ -11,6 +11,6 @@ public enum Role {
     }
 
     public boolean isAdmin(){
-        return this == ADMIN;
+        return this == ADMIN; 
     }
 }
