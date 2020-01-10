@@ -23,6 +23,10 @@ public class TimetableController {
     @PostMapping("/create")
     public void create(@RequestBody Timetable timetable){
         timetableService.addTimes(timetable);
-
     }
+    @GetMapping
+    public List<String> timetables(@RequestParam(required = false) String name) {
+        return timetableService.freeTimes();
+    }
+
 }

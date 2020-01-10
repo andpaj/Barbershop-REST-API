@@ -17,12 +17,12 @@ public class AlkostudentsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlkostudentsApplication.class, args);
 	}
-	/*@Bean
+	/*
+	@Bean
 	public CommandLineRunner initStuff(TimetableService timetableService) {
 		return (args) ->
-				timetableService.addTimesToTable();
-
-
-	}*/
+				timetableService.freeTimes();
+	}
+	 */
 
 }
