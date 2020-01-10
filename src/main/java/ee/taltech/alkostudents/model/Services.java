@@ -22,12 +22,12 @@ public class Services {
     private String serviceName;
 
     @Column(name = "price")
-    private Long price;
+    private String price;
 
     @Column(name = "duration")
     private int duration;
 
-    public Services(Long id, String serviceName, Long price, int duration) {
+    public Services(Long id, String serviceName, String price, int duration) {
         this.serviceName = serviceName;
         this.price = price;
         this.duration = duration;
@@ -46,10 +46,10 @@ public class Services {
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
-    public Long getPrice() {
+    public String getPrice() {
         return price;
     }
-    public void setPrice(Long price) {
+    public void setPrice(String price) {
         this.price = price;
     }
     public int getDuration() {

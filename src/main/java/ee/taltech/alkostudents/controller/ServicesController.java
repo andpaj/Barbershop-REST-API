@@ -1,5 +1,6 @@
 package ee.taltech.alkostudents.controller;
 
+import ee.taltech.alkostudents.model.ServicesCreationRequest;
 import ee.taltech.alkostudents.model.Services;
 import ee.taltech.alkostudents.service.ServicesService;
 import lombok.AllArgsConstructor;
@@ -21,9 +22,8 @@ public class ServicesController {
     }
 
     @PostMapping("/create")
-    public void create3(@RequestBody Services service){
-        servicesService.addService(service);
-        System.out.println("Service is created!");;
+    public Services createService(@RequestBody ServicesCreationRequest request){
+        return servicesService.addService(request);
     }
 
 }
