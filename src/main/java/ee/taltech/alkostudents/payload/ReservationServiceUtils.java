@@ -1,7 +1,6 @@
-package ee.taltech.alkostudents.Util;
+package ee.taltech.alkostudents.payload;
 
 import ee.taltech.alkostudents.model.Reservation;
-import ee.taltech.alkostudents.model.ReservationCreationRequest;
 
 public class ReservationServiceUtils {
 

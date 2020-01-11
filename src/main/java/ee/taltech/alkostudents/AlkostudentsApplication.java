@@ -1,15 +1,7 @@
 package ee.taltech.alkostudents;
 
-import ee.taltech.alkostudents.controller.ReservationController;
-import ee.taltech.alkostudents.model.Reservation;
-import ee.taltech.alkostudents.service.ReservationService;
-import ee.taltech.alkostudents.service.TimetableService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.util.List;
 
 @SpringBootApplication
 public class AlkostudentsApplication {
@@ -17,12 +9,20 @@ public class AlkostudentsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlkostudentsApplication.class, args);
 	}
-	/*@Bean
-	public CommandLineRunner initStuff(TimetableService timetableService) {
-		return (args) ->
-				timetableService.addTimesToTable();
-
-
-	}*/
-
+	/*
+	@Bean
+	public FilterRegistrationBean simpleCorsFilter() {
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(true);
+		// *** URL below needs to match the Vue client URL and port ***
+		config.setAllowedOrigins(Collections.singletonList("http://localhost:8080"));
+		config.setAllowedMethods(Collections.singletonList("*"));
+		config.setAllowedHeaders(Collections.singletonList("*"));
+		source.registerCorsConfiguration("/**", config);
+		FilterRegistrationBean bean = new FilterRegistrationBean<>(new CorsFilter(source));
+		bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		return bean;
+	}
+*/
 }

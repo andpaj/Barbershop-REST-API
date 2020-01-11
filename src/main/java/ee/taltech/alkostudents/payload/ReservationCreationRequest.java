@@ -1,4 +1,4 @@
-package ee.taltech.alkostudents.model;
+package ee.taltech.alkostudents.payload;
 
 import lombok.Data;
 
