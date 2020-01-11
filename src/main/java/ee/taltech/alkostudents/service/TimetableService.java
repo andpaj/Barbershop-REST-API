@@ -53,13 +53,13 @@ public class TimetableService {
     }
 
     private List<String> removeTimesFromListIfUsed(List<String> times) {
-        ArrayList<String> testTimes = new ArrayList<>();
-        //testTimes.add("10:00");
-        //testTimes.add("16:00");
-        //testTimes.add("14:30");
-        for (int i = 0; i < testTimes.size(); i++) {
-            if (times.contains(testTimes.get(i))) {
-                times.remove(testTimes.get(i));
+        ArrayList<String> usedTimes = new ArrayList<>();
+        //usedTimes.add("10:00");
+        //usedTimes.add("16:00");
+        //usedTimes.add("14:30");
+        for (int i = 0; i < usedTimes.size(); i++) {
+            if (times.contains(usedTimes.get(i))) {
+                times.remove(usedTimes.get(i));
             }
         }
         return times;
