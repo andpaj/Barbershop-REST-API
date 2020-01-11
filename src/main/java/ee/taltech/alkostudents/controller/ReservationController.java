@@ -33,4 +33,9 @@ public class ReservationController {
     public Reservation createReservation(@RequestBody ReservationCreationRequest request) {
         return reservationService.addReservation(request);
     }
+
+    @DeleteMapping("/delete")
+    public void delete(@RequestBody Reservation reservation){
+        reservationService.deleteReservation(reservation);
+    }
 }
