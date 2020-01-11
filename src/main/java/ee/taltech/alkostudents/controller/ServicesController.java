@@ -26,4 +26,9 @@ public class ServicesController {
         System.out.println("Service is created!");;
     }
 
+    @DeleteMapping("/delete")
+    public void delete(@RequestBody Services service){
+        servicesService.deleteService(service);
+    }
+
 }
