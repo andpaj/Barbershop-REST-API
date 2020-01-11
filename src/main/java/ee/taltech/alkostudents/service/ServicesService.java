@@ -26,6 +26,10 @@ public class ServicesService {
         return repo.save(converter(service));
     }
 
+    public void deleteService(Services service){
+        repo.delete(service);
+    }
+
     public Services converter(Services service) {
         Services serv = new Services();
         serv.setId(service.getId());
