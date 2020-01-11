@@ -48,15 +48,15 @@ public class TimetableService {
             }
         }
         List<String> finalTimes = removeTimesFromListIfUsed(times);
-        System.out.print(finalTimes);
+        //System.out.print(finalTimes);
         return finalTimes;
     }
 
     private List<String> removeTimesFromListIfUsed(List<String> times) {
         ArrayList<String> testTimes = new ArrayList<>();
-        testTimes.add("10:00");
-        testTimes.add("16:00");
-        testTimes.add("14:30");
+        //testTimes.add("10:00");
+        //testTimes.add("16:00");
+        //testTimes.add("14:30");
         for (int i = 0; i < testTimes.size(); i++) {
             if (times.contains(testTimes.get(i))) {
                 times.remove(testTimes.get(i));
