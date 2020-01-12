@@ -44,7 +44,7 @@ public class TimetableService {
             times.add(new Timetable(i, "0", timeFull, true));
             //times.add(timeFull);
             if (!timeHalf.equals("17:30")) {
-                times.add(new Timetable(i + 2, "0", timeHalf, true));
+                times.add(new Timetable(i + 1, "0", timeHalf, true));
                 //times.add(timeHalf);
             }
         }
