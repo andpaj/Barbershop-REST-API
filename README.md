@@ -1,25 +1,15 @@
 # Barbershop
 Alko-students project
 
-## Must have
+## How to run locally
 
 ##
-### User module
-    1. User can register haircut time
-    2. User can select haircut service
+### Make sure you have auto imports enabled and annotation processing
 
 
-## Nice to have
 
-### User module
-    1. User can register with account
-    2. User can see his history
-    3. User can edit his profile
-    
-### Admin module
-    1. Can add users
-    2. Can delete users
-    3. Can update users info
-    4. Can update services
-    5. Can delete services
+## Just copy src code and run
+
+##Pipeline is working for that code in security branch
+
     
