@@ -63,7 +63,9 @@ public class AuthService {
                 userDetails.getId(),
                 userDetails.getUsername(),
                 userDetails.getEmail(),
-                roles));
+                roles,
+                userDetails.getFirstname(),
+                userDetails.getLastname()));
     }
 
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
