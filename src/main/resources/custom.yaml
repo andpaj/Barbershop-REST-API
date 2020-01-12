@@ -1,3 +1,4 @@
+
 server:
   port: 9000
   servlet:
@@ -11,6 +12,9 @@ spring:
       hibernate:
         temp:
           use_jdbc_metadata_defaults : false
+        jdbc:
+          lob:
+          non_contextual_creation: true
     hibernate:
       ddl-auto: none
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -20,3 +24,6 @@ spring:
     password: alkouserpw
 logging:
   path: ./logs
+app:
+  jwtSecret: mkSecretKey
+  jwtExpirationMs: 86400000

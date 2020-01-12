@@ -26,7 +26,7 @@ public class TimetableController {
     }
 
     @GetMapping
-    public List<String> times(@RequestParam(required = false) String name) {
+    public List<Timetable> times(@RequestParam(required = false) String name) {
         return timetableService.freeTimes();
     }
 

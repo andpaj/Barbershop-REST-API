@@ -32,4 +32,11 @@ public class ReservationController {
     public Reservation createReservation(@RequestBody ReservationCreationRequest request) {
         return reservationService.addReservation(request);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("/delete")
+    public void delete(@RequestBody Reservation request){
+        reservationService.deleteReservation(request);
+    }
+
 }
