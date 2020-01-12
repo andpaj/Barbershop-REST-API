@@ -24,10 +24,4 @@ public class TimetableController {
     public void create(@RequestBody Timetable timetable){
         timetableService.addTimes(timetable);
     }
-
-    @GetMapping
-    public List<String> times(@RequestParam(required = false) String name) {
-        return timetableService.freeTimes();
-    }
-
 }

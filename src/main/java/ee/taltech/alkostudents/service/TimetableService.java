@@ -18,8 +18,8 @@ public class TimetableService {
     }
 
     public List<Timetable> getAllTimes() {
-        List<Timetable> timetables = new ArrayList<>();
-        repo.findAll().forEach(timetables::add);
+        List<Timetable> timetables = new ArrayList<>(freeTimes());
+        //repo.findAll().forEach(timetables::add);
         return timetables;
     }
 
@@ -36,26 +36,24 @@ public class TimetableService {
         return times;
     }
 
-    public List<String> freeTimes() {
-        ArrayList<String> times = new ArrayList<>();
-        for (int i = 0; i < 18 - 9; i++) {
+    public List<Timetable> freeTimes() {
+        ArrayList<Timetable> times = new ArrayList<>();
+        for (long i = 0; i < 18 - 9; i++) {
             String timeFull = (i + 9) + ":00";
             String timeHalf = (i + 9) + ":30";
-            times.add(timeFull);
+            times.add(new Timetable(i, "0", timeFull, true));
+            //times.add(timeFull);
             if (!timeHalf.equals("17:30")) {
-                times.add(timeHalf);
+                times.add(new Timetable(i + 2, "0", timeHalf, true));
+                //times.add(timeHalf);
             }
         }
-        List<String> finalTimes = removeTimesFromListIfUsed(times);
-        //System.out.print(finalTimes);
-        return finalTimes;
+        //List<Timetable> finalTimes = removeTimesFromListIfUsed(times);
+        return times;
     }
-
-    private List<String> removeTimesFromListIfUsed(List<String> times) {
+/*
+    private List<Timetable> removeTimesFromListIfUsed(List<String> times) {
         ArrayList<String> usedTimes = new ArrayList<>();
-        //usedTimes.add("10:00");
-        //usedTimes.add("16:00");
-        //usedTimes.add("14:30");
         for (int i = 0; i < usedTimes.size(); i++) {
             if (times.contains(usedTimes.get(i))) {
                 times.remove(usedTimes.get(i));
@@ -63,5 +61,5 @@ public class TimetableService {
         }
         return times;
     }
-
+ */
 }
