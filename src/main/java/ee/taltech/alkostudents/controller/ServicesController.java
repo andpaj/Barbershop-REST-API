@@ -16,7 +16,7 @@ public class ServicesController {
 
     private ServicesService servicesService;
 
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+
     @GetMapping("/findall")
     public List<Services> services() {
         return servicesService.getAllServices();
