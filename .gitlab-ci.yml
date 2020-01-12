@@ -24,7 +24,7 @@ deploy alkostudents:
   stage: deploy
   only:
     refs:
-      - master
+      - security
   tags:
     - alkostudents-back-tag
   script:
