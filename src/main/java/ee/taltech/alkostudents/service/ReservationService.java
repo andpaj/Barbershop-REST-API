@@ -27,4 +27,8 @@ public class ReservationService {
         Reservation newReservation = creationRequestMapToTicket(request);
         return reservationRepository.save(newReservation);
     }
+
+    public void deleteReservation(Reservation reservation){
+        reservationRepository.delete(reservation);
+    }
 }
