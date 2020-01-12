@@ -37,7 +37,6 @@ public class TimetableService {
     }
 
     public List<String> freeTimes() {
-
         ArrayList<String> times = new ArrayList<>();
         for (int i = 0; i < 18 - 9; i++) {
             String timeFull = (i + 9) + ":00";
