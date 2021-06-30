@@ -1,5 +1,5 @@
 # Barbershop
-Alko-students project
+students project
 
 ## How to run locally
 
